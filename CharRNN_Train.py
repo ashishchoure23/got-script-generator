@@ -3,7 +3,6 @@ import torch
 from torch import nn
 import torch.nn.functional as functional
 import numpy as np
-from tqdm import tqdm
 import logging
 import argparse
 from os import path
@@ -191,7 +190,8 @@ def train(net, data, epochs=10, batch_size=10, seq_length=50, lr=0.001, clip=5, 
         print_every: Number of steps for printing training and validation loss
     
     '''
-
+    from tqdm import tqdm
+    
     logger = logging.getLogger('Char_RNN')
 
     if(train_on_gpu):
