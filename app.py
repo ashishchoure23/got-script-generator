@@ -103,7 +103,7 @@ def generatescript():
     
     starttext = request.form['starttext']
 
-    script = sample(net, 1000, prime=starttext, top_k=2)
+    script = sample(net, 1500, prime=starttext, top_k=2)
 
     lastdot = script.rfind('.')
     script = script[:lastdot + 1]
