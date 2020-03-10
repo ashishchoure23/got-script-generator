@@ -4,7 +4,7 @@ This app generates script based on Game of thrones all seasons scripts. I have t
 
 # Live app
 
-
+[GOT script generator](https://got-script-generator.herokuapp.com/)
 
 # Installing
 
