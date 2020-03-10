@@ -1,0 +1,22 @@
+body {
+    background: linear-gradient(-45deg, #48c6ef , #6f86d6, #23a6d5, #23d5ab);
+    background-size: 400% 400%;    
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+    color:blanchedalmond;
+}
+
+
+h1,h2{
+    font-family: gotfont;
+}
+
+h4{
+    color:beige;
+}
+
+@font-face{
+    font-family: gotfont;
+    src: url('Game\ of\ Thrones.ttf');
+}
+
+

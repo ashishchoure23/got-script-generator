@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Game of thrones script generator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/bootstrap.min.css">
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href="../static/component-spinners.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container-sm">
+            <br/>
+            <br/>
+            <h1>Game of thrones script generator</h1>
+            <h2>by Ashish Choure</h2>
+            <br/>
+            <h4>I have trained RNN model with all game of thrones seasons script using GRU.
+                Enter any word or dialog to continue with. The model will generate rest of the script</h4>
+            <br/>
+            <br/>
+            <br/>
+            <form action="/generatescript" method="POST">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Enter any word or partial sentence to start</label>                    
+                    <input class="form-control form-control-sm" id="Textarea1" name="starttext" required></textarea>
+                    <br/>
+                    <br/>                    
+                    <button class="btn btn-primary btn-spinner-example" id="btnGenerate" type="submit" data-spinner-text="Generating...">
+                        Generate
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <script src="../static/jquery-3.4.1.min.js"></script>
+        <script src="../static/component-spinners.min.js"></script>
+        <script type="text/javascript">
+            $('.btn-spinner-example').click(function() {
+              var btn = $(this);
+              $(btn).buttonLoader('start');
+              setTimeout(function() {
+                $(btn).buttonLoader('stop');
+              }, 5000);
+            });
+        </script>
+    </body>
+</html>
