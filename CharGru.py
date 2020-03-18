@@ -16,13 +16,13 @@ class CharGruNet(nn.Module):
         self.n_layers = num_layers
         self.drop_prob = drop_prob
 
-        # ==============LSTM===================
+        # ==============GRU===================
         self.gru = nn.GRU(input_size = len(self.chars),
                             hidden_size = hidden_size,
                             num_layers = num_layers,
                             dropout = drop_prob,
                             batch_first = True)
-        # ==============LSTM===================
+        # ==============GRU===================
 
         self.dropout = nn.Dropout(p = self.drop_prob)
 
